@@ -1,0 +1,42 @@
+
+<div>
+    <div class="form-group">
+        <form #complaintForm="ngForm" (ngSubmit)="onSubmit()" class="com">
+          <select required class="form-control" [(ngModel)]="complaint.category"
+          name="category">
+            <option value="" disabled selected>
+              select the type of violence
+            </option>
+            <option value="rape">
+              rape
+            </option>
+            <option value="marital_rape">
+              marital rape
+            </option>
+            <option value="domestic_violence">
+              domestic violence
+            </option>
+            <option value="dowry_violence">
+              dowry violence
+            </option>
+            <option value="honor_killings">
+              honor killings
+            </option>
+          </select>
+          <input type="text" placeholder="Enter name" class="form-control" [(ngModel)]="complaint.name"
+          name="name"/>
+          <input type="text" placeholder="Enter phone number is she has" class="form-control"
+          [(ngModel)]="complaint.phone" name="phone"/>
+          <textarea placeholder="Enter brief description" class="form-control" rows="5"
+          [(ngModel)]="complaint.desc" name="desc"></textarea>
+          <input class="form-control" placeholder="search for crime location" type="text" #search [formControl]="searchControl">
+          <div id="map12">
+              <agm-map [latitude]="complaint.location.latitude" [longitude]="complaint.location.longitude">
+                <agm-marker [latitude]="complaint.location.latitude" [longitude]="complaint.location.longitude" [markerDraggable]="true"
+                 (dragEnd)="dragEnded($event)"></agm-marker>
+              </agm-map>
+          </div>  
+          <button class="btn form-control btn-success">Submit Complaint</button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+div{
+    background-image: url("1189.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+li{
+    color: white;
+    
+    position: relative;
+    margin-right: 20%;
+    margin-left: 20%;
+}

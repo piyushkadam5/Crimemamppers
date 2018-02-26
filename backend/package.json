@@ -1,0 +1,21 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "backend for crime mappers",
+  "main": "entry.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "vinit mahajan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "*",
+    "express-validator": "*",
+    "mongoose": "*",
+    "body-parser": "*",
+    "cors": "*",
+    "passport": "*",
+    "passport-local": "*",
+    "bcryptjs": "*"
+  }
+}

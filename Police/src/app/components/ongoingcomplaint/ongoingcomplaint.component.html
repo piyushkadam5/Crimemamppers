@@ -1,0 +1,36 @@
+<div class="heading">
+  <h1>Complaints</h1>
+</div>
+  <div   *ngFor="let crime of complaints">
+      <div  class="jumbotron"  *ngIf="crime.area === area">
+          <h1>
+            <p>Crime type: {{crime.typeofcrime}}
+            </h1>
+            <br><br>
+            <h3>
+            Description: {{crime.description}}
+            </h3>
+            <br><br>
+            <h4>
+              Name of Victim: {{crime.name}}
+            </h4>
+            <br><br>
+            <h4>
+              Phone of Victim: {{crime.phone}}
+            </h4>
+            <br><br>
+            <label for="police">Police Work on this case</label>
+            <div class="progress" id="police">
+                <div  id="police1" class="progress-bar progress-bar-striped progress-bar-animated bg-success" [style.width]="crime.widthp+'%'">{{crime.widthp}}%</div>
+            </div>
+            <label for="NGO">NGO's Work on this case</label>
+            <div class="progress" id="NGO">
+                <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" [style.width]="crime.widthn+'%'">{{crime.widthn}}%</div>
+            </div>
+            <button *ngIf="crime.widthp !== 100" class="btn btn-success" style="float:right;" (click)="stageclicked(crime)"
+            >Complete this stage</button>
+            <h5 *ngIf="crime.widthp === 100" style="float:right;color:green;">
+              Case Solved
+            </h5>
+      </div>
+  </div>

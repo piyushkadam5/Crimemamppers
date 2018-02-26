@@ -1,0 +1,13 @@
+<div class="login-page">
+  <div class="form">
+    <form class="login-form" #loginForm="ngForm" (ngSubmit)="onSubmit()" ngNativeValidte>
+      <input type="text" placeholder="username" name="username" [(ngModel)]="login.username"
+      required/>
+      <input type="password" placeholder="password" required name="password" [(ngModel)]="login.password"
+     />
+      <button [disabled]="!loginForm.form.valid">login</button>
+      <p class="message">Not registered? <a routerLink="/signup">Create an account</a></p>
+      <p class="message">{{login.username}}  {{login.password}}</p>
+    </form>
+  </div>
+</div>

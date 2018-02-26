@@ -1,0 +1,29 @@
+<div class="heading">
+  <h1>My complaints</h1>
+</div>
+  <div   *ngFor="let crime of compliant">
+      <div  class="jumbotron" *ngIf="crime.username === username" >
+          <h1>
+              Crime Type: {{crime.typeofcrime}}
+            </h1><br>
+            <h5>Name Of Victim: {{crime.name}}</h5>
+            <br>
+            <h5>Phone Of Victim: {{crime.phone}}</h5><br>
+            <h3>
+                Crime Description: {{crime.description}}
+            </h3>
+            <br><br>
+            <label for="police">Police Work on this case</label>
+            <div class="progress" id="police">
+                <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" [style.width]="crime.widthp+'%'">{{crime.widthp}}%</div>
+            </div>
+            <label for="NGO">NGO's Work on this case</label>
+            <div class="progress" id="NGO">
+                <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" [style.width]="crime.widthn+'%'">{{crime.widthn}}%</div>
+            </div>
+            <h5 *ngIf="crime.widthp !== 100" style="float:right;color:red;">case is in progess</h5>
+            <h5 *ngIf="crime.widthp === 100" style="float:right;color:green;">
+              Case Solved
+            </h5>
+      </div>
+  </div>

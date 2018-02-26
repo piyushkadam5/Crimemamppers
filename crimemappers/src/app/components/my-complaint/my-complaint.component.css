@@ -1,0 +1,11 @@
+.jumbotron , .heading{
+    width: 70%;
+    top:20%;
+    left: 20%;
+    right: 20%;
+    position: relative;
+}
+.heading{
+    text-align: center;
+    top: 20%;
+}

@@ -1,0 +1,20 @@
+
+map1{
+    height: 100vh;
+}
+
+agm-map {
+    height: 100vh;
+  }
+ 
+  #searchbox{
+      position: absolute;
+      width: 30%;
+      right: 5%;
+}
+ form-inline{
+     color: darkgray;
+ }
+
+
+ 

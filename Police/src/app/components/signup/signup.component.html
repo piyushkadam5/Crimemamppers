@@ -1,0 +1,22 @@
+<div class="login-page">
+  <div class="form">
+    <form class="register-form" (ngSubmit)="onSubmit()" #signupForm="ngForm">
+      <input type="text" placeholder="Police station area name" name="area"
+      #search [formControl]="searchControl" [(ngModel)]="signup.area"
+      />
+      <input type="text" placeholder="Landline number" 
+      name="phone" [(ngModel)]="signup.phone"/>
+      <input type="password" placeholder="password" 
+      name="password" [(ngModel)]="signup.password"/>
+      <div>
+        <agm-map [latitude]="signup.location.latitude" [longitude]="signup.location.longitude">
+          <agm-marker [latitude]="signup.location.latitude" [longitude]="signup.location.longitude" [markerDraggable]="true"
+           (dragEnd)="dragEnded($event)"></agm-marker>
+        </agm-map>
+      </div>
+      <button>create</button>
+      <button>clear</button>
+      <p class="message">Already registered? <a routerLink="/login">Sign In</a></p>
+    </form>
+  </div>
+</div>

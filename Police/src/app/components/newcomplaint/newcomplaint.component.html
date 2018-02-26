@@ -1,0 +1,23 @@
+<div class="heading">
+  <h1>New Complaints</h1>
+</div>
+  <div   *ngFor="let crime of complaints">
+      <div  class="jumbotron"  *ngIf="!crime.area">
+          <h1>
+              {{crime.typeofcrime}}
+            </h1>
+            <h3>
+              {{crime.description}}
+            </h3>
+            <br><br>
+            <label for="police">Police Work on this case</label>
+            <div class="progress" id="police">
+                <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" style="width: 1%"></div>
+            </div>
+            <label for="NGO">NGO's Work on this case</label>
+            <div class="progress" id="NGO">
+                <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" style="width: 1%"></div>
+            </div>
+            <button style="float:right" class="btn btn-success" (click)="takeover(crime)">Take over case</button>
+      </div>
+  </div>
