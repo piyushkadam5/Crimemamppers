@@ -25,9 +25,10 @@ router.post('/login',function(req,res){
             }
             if(!user){
                 res.json({message:'no user present'});
+            }else{
+                res.json({message:'goodtogo',latitude:user.location.latitude,
+                longitude:user.location.longitude,landline:user.phone});
             }
-            res.json({message:'goodtogo',latitude:user.location.latitude,
-        longitude:user.location.longitude,landline:user.phone});
         });   
    
 });

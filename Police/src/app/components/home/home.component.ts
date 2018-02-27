@@ -59,7 +59,7 @@ export class HomeComponent implements OnInit {
   }
   ngOnInit() {
 
-    this.zoom = 4;
+    this.zoom = 8;
     this.latitude = +localStorage.getItem('latitude');
     this.longitude = +localStorage.getItem('longitude');
     //create search FormControl

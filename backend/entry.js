@@ -17,7 +17,8 @@ mongoose.connection.on('error',(err)=>{
     console.log(err);
 });
 
-const PORT = process.env.PORT || 8080;
+const PORT = 3000;
+
 app.get('/',(req,res)=>{
     res.send('Connected');
 });

@@ -12,27 +12,27 @@ export class UserService {
     console.log('data service connected');
   }
   getCrimes(){
-    return this.http.get('crime/crime')
+    return this.http.get('http://localhost:3000/crime/crime')
     .map(res => res.json());
   }
   getUsers(){
-    return this.http.get('user/user')
+    return this.http.get('http://localhost:3000/user/user')
     .map(res=>res.json());
   }
   getPoliceStation(){
-    return this.http.get('police/police')
+    return this.http.get('http://localhost:3000/police/police')
     .map(res=>res.json());
   }
   getVerfied(login:Login){
-    return this.http.post('user/login',
+    return this.http.post('http://localhost:3000/user/login',
     login).map(res=>res.json());
   }
   addComplaint(complaint:Complaint){
-    return this.http.post('crime/crime',complaint)
+    return this.http.post('http://localhost:3000/crime/crime',complaint)
     .map((res)=>res.json());
   }
   createUser(signup:Signup){
-    return this.http.post('user/signup',signup).
+    return this.http.post('http://localhost:3000/user/signup',signup).
     map((res)=>res.json());
   }
 }

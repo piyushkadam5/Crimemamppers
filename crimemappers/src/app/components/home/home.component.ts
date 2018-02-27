@@ -59,7 +59,7 @@ export class HomeComponent implements OnInit {
   }
   ngOnInit() {
 
-    this.zoom = 4;
+    this.zoom = 8;
     this.latitude = 39.8282;
     this.longitude = -98.5795;
 
@@ -84,7 +84,7 @@ export class HomeComponent implements OnInit {
           //set latitude, longitude and zoom
           this.latitude = place.geometry.location.lat();
           this.longitude = place.geometry.location.lng();
-          this.zoom = 0;
+          this.zoom = 12;
         });
       });
     });
